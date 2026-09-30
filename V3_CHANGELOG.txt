@@ -1,0 +1,38 @@
+NovaX™ Prototype V3 — Builder Journey UX Simplification
+
+Purpose
+V3 is a surgical UX refinement of V2 based on Founder human testing. It preserves V41 quiz/scoring/invite/reward/localStorage behavior while simplifying the Builder Profile result and Hub experience.
+
+Landing
+- Keeps the approved Founder-supplied NovaX™ landing mockup as the portrait visual source.
+- Keeps the functional quiz CTA.
+- Keeps legal/footer navigation: Home, Quiz, Privacy, Terms.
+
+Builder Profile result
+- Adds a prominent ENTER YOUR NOVAX™ HUB action at the top of the result experience.
+- Simplifies the result information hierarchy.
+- Removes the redundant What This Means block.
+- Moves JOIN THE FOUNDERS WAITLIST below the identity/profile discovery experience.
+
+Hub
+- Rebuilt as a Journey/Map-first experience.
+- Removes the sidebar/dashboard overload and Community implication from the free Hub.
+- Uses the Journey as the primary visual.
+- Adds a clear NEXT MOVE.
+- Uses approved Journey language; retired Become terminology is removed.
+- Keeps Path Discovery but presents the three Paths as participation depth: Steward beginner, Sentinel intermediate, Vanguard serious Builder.
+- Founder Rewards are reduced to a compact progress section; prototype controls are tucked into details.
+- Builder-to-Builder discovery/community is not exposed in the free Hub.
+
+Theme
+- Light/Dark controls remain Builder-facing.
+- Light mode explicitly changes the Hub content surfaces, typography, borders, and controls.
+- Header remains dark in Light mode so the approved light-on-dark NovaX Signature logo remains legible.
+
+Not changed
+- Quiz questions
+- Deterministic scoring
+- Builder archetypes
+- Builder Card core behavior
+- Invite/reward simulation logic
+- LocalStorage baseline
