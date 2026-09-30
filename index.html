@@ -2,209 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#05090d">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NovaX™ — Building the Parallel Economy</title>
-<meta name="description" content="NovaX™ — Building the Parallel Economy. What would you do with $50K? Take the quiz to see if you qualify for NovaX™">
+<meta name="description" content="NovaX™ — Building the Parallel Economy. What would you do with $50K? Take the quiz to see if you qualify for NovaX™.">
 <style>
-:root{--gold:#f3c66f;--gold2:#ffd98d;--ink:#05090d}
+:root{--bg:#05090d;--footer:#050709;--footer-text:#77736a;--footer-link:#9a968b}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-html,body{margin:0;padding:0;width:100%;min-height:100%;background:var(--ink)}
-body{font-family:Arial,Helvetica,sans-serif;color:#fff;overflow-x:hidden;overflow-y:auto}
-
-/* The landing page is built from the approved portrait composition, but its
-   geometry is CSS-driven. This prevents a portrait bitmap from becoming a
-   narrow column on laptops and keeps every text block centered by the viewport. */
-.landing{position:relative;min-height:calc(100svh - 44px);height:calc(100svh - 44px);overflow:hidden;isolation:isolate;background:var(--ink)}
-.landing::before{content:"";position:absolute;inset:0;z-index:-3;background-image:url("assets/landing-background-portrait.png");background-position:center bottom;background-size:cover;background-repeat:no-repeat}
-.landing::after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(to bottom,rgba(2,7,11,.88) 0%,rgba(2,7,11,.62) 40%,rgba(2,7,11,.10) 72%,rgba(2,7,11,.10) 100%)}
-
-.content{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(28px,4.5vh,72px) 20px 28px}
-.logo{display:block;width:min(50vw,540px);max-width:100%;height:auto;margin:0 auto;object-fit:contain}
-.tagline{margin-top:clamp(18px,3vh,38px);font-size:clamp(13px,1.45vw,25px);font-weight:400;letter-spacing:.42em;line-height:1.2;white-space:nowrap;text-transform:uppercase}
-.hero-copy{margin-top:clamp(42px,7vh,96px);width:min(100%,1000px)}
-h1{margin:0;font-size:clamp(42px,5.3vw,92px);font-weight:800;letter-spacing:-.045em;line-height:1.02;text-wrap:balance}
-h1 .gold{color:var(--gold)}
-.subcopy{margin:clamp(25px,3.5vh,48px) auto 0;font-size:clamp(18px,1.9vw,32px);line-height:1.3;max-width:760px}
-.cta{margin-left:auto;margin-right:auto;margin-top:clamp(28px,4vh,52px);width:min(440px,76vw);min-height:68px;padding:0 34px;border:3px solid var(--gold2);border-radius:999px;background:rgba(0,0,0,.52);color:var(--gold2);font-size:clamp(17px,1.55vw,25px);font-weight:700;letter-spacing:.11em;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:28px;box-shadow:0 8px 28px rgba(0,0,0,.35);transition:transform .16s ease,background .16s ease}
-.cta span:last-child{font-size:1.35em;font-weight:400;line-height:0}
-.cta:hover{transform:translateY(-2px);background:rgba(0,0,0,.72)}
-.cta:focus-visible{outline:3px solid #fff;outline-offset:6px}
-
-.bottom{position:absolute;left:50%;right:auto;transform:translateX(-50%);bottom:clamp(24px,4vh,54px);width:max-content;display:flex;flex-direction:column;align-items:center;gap:14px;pointer-events:none}
-.ring{display:block;width:62px;height:62px;object-fit:contain;flex:0 0 auto}
-.bottom-text{font-size:clamp(11px,1.05vw,18px);letter-spacing:.32em;text-transform:uppercase}
-
-.site-footer{height:44px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;padding:8px 14px;background:#050709;color:#77736a;font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-align:center}
-.site-footer a{color:#8f8c83;text-decoration:none}.site-footer a:hover{color:#d7bd7e}
-
-/* ONE SHARED LANDSCAPE SYSTEM — phone, tablet, laptop and desktop.
-   Portrait mobile is isolated below and remains the approved V5 artwork. */
-@media (orientation:landscape){
-  .landing{
-    height:calc(100svh - 44px);
-    min-height:0;
-    overflow:hidden;
-    background:#05090d;
-  }
-  .landing::before{
-    background-image:url("assets/landing-background.png");
-    background-size:cover;
-    background-position:center bottom;
-    background-repeat:no-repeat;
-  }
-  .landing::after{
-    background:linear-gradient(to bottom,rgba(2,7,11,.90) 0%,rgba(2,7,11,.68) 44%,rgba(2,7,11,.18) 74%,rgba(2,7,11,.05) 100%);
-  }
-  .content{
-    height:100%;
-    padding:clamp(6px,1.5vh,18px) 16px clamp(8px,1.5vh,18px);
-    justify-content:flex-start;
-  }
-  .logo{
-    width:min(34vw,52vh,500px);
-    max-width:80vw;
-    flex:0 0 auto;
-  }
-  .tagline{
-    margin-top:clamp(5px,1.4vh,14px);
-    font-size:clamp(10px,2.35vh,23px);
-    letter-spacing:.42em;
-    flex:0 0 auto;
-  }
-  .hero-copy{
-    margin-top:clamp(10px,3.1vh,34px);
-    width:min(100%,1050px);
-    flex:0 0 auto;
-  }
-  h1{
-    font-size:clamp(27px,7.8vh,78px);
-    line-height:1.01;
-  }
-  .subcopy{
-    margin-top:clamp(8px,2.0vh,20px);
-    font-size:clamp(12px,3.5vh,27px);
-    line-height:1.18;
-  }
-  .cta{
-    margin-top:clamp(8px,2.0vh,22px);
-    width:min(430px,48vw);
-    min-height:clamp(42px,7.8vh,68px);
-    padding:0 24px;
-    font-size:clamp(13px,3.0vh,25px);
-    gap:clamp(14px,2.5vh,28px);
-  }
-  .bottom{
-    bottom:clamp(7px,1.4vh,14px);
-    gap:clamp(4px,.8vh,8px);
-  }
-  .ring{
-    width:clamp(25px,5vh,42px);
-    height:clamp(25px,5vh,42px);
-  }
-  .bottom-text{font-size:clamp(7px,1.65vh,14px)}
-  .mobile-cta-hit{display:none!important}
-}
-
-/* Short landscape phones and small tablets use the dedicated wide scenic
-   background, while retaining the exact same foreground layout. */
-@media (orientation:landscape) and (max-width:767px){
-  .landing::before{
-    background-image:url("assets/landing-background.png");
-    background-position:center bottom;
-  }
-  .content{padding-left:10px;padding-right:10px}
-  .logo{width:min(32vw,20vh,240px)}
-  .tagline{font-size:clamp(8px,2.15vh,15px);letter-spacing:.34em}
-  .hero-copy{margin-top:clamp(8px,2.3vh,18px)}
-  h1{font-size:clamp(24px,6.9vh,48px)}
-  .subcopy{font-size:clamp(11px,3.0vh,18px);margin-top:clamp(6px,1.5vh,12px)}
-  .cta{width:min(310px,42vw);min-height:clamp(38px,7vh,52px);font-size:clamp(11px,2.5vh,17px);border-width:2px}
-  .bottom{bottom:clamp(5px,1vh,9px)}
-  .bottom-text{font-size:clamp(6px,1.35vh,10px);letter-spacing:.25em}
-}
-
-/* Extra-wide desktop caps. */
-@media (min-width:1600px) and (orientation:landscape){
-  .logo{width:min(500px,52vh)}
-  .hero-copy{max-width:1050px}
-  h1{font-size:min(78px,9vh)}
-  .subcopy{font-size:min(27px,4.5vh)}
-  .tagline{font-size:min(23px,2.5vh)}
-}
-
-/* MOBILE PORTRAIT — CURRENT APPROVED NOVAX™ MOCKUP. Keep structural alignment with the supplied mockup. */
-@media (max-width:900px) and (orientation:portrait){
-  .landing{
-    height:calc(100svh - 58px);
-    min-height:calc(100svh - 58px);
-    overflow:hidden;
-    background:#05090d;
-  }
-  .landing::before{
-    background-image:url("assets/landing-approved-mockup.png");
-    background-size:auto 100%;
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color:#05090d;
-  }
-  .landing::after{display:none}
-  .content{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    padding:0;
-    display:block;
-  }
-  .logo,.tagline,.hero-copy,.bottom{display:none}
-  .site-footer{
-    min-height:58px;
-    height:auto;
-    gap:7px 11px;
-    font-size:8px;
-    padding:9px 10px;
-  }
-  .mobile-cta-hit{
-    display:block;
-    position:absolute;
-    left:50%;
-    top:44.8%;
-    width:52%;
-    height:5.9%;
-    transform:translate(-50%,-50%);
-    border-radius:999px;
-    z-index:10;
-    cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
-  }
-}
-
-@media (max-width:900px) and (orientation:portrait){
-  body{overflow-y:auto}
-}
-@media (prefers-reduced-motion:reduce){.cta{transition:none}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--bg)}
+body{margin:0;min-height:100vh;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+.landing-page{min-height:100vh;background:var(--bg);display:flex;flex-direction:column;align-items:center}
+.landing-stage{position:relative;width:min(896px,100%);line-height:0;background:var(--bg)}
+.landing-art{display:block;width:100%;height:auto;max-width:896px}
+.landing-cta{position:absolute;left:50%;top:44.85%;width:52%;height:6%;transform:translate(-50%,-50%);border-radius:999px;z-index:2;display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.landing-cta:focus-visible{outline:3px solid #fff;outline-offset:6px}
+.site-footer{width:100%;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 12px 16px;background:var(--footer);color:var(--footer-text);font-size:10px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.site-footer a{color:var(--footer-link);text-decoration:none}.site-footer a:hover{color:#d7bd7e}.site-footer a:focus-visible{outline:2px solid #d7bd7e;outline-offset:3px}
+@media(max-width:600px){.landing-stage{width:100%}.landing-cta{top:44.85%;width:54%;height:6.2%}.site-footer{font-size:9px;gap:8px;padding:12px 9px 14px}}
 </style>
-<link rel="stylesheet" href="assets/novax-signature.css">
 </head>
 <body>
-<main aria-label="NovaX™ landing page">
-  <section class="landing">
-    <div class="content">
-      <img class="logo" src="assets/NovaX_Signature_Logo_Dark.png" alt="NovaX™">
-      <div class="tagline">Building the Parallel Economy</div>
-      <div class="hero-copy">
-        <h1>What would you do<br>with <span class="gold">$50K?</span></h1>
-        <p class="subcopy">Take the quiz to see if you qualify for<br class="desktop-break"> NovaX™</p>
-        <a class="cta" href="quiz.html" aria-label="Let's begin the NovaX™ quiz"><span>LET’S BEGIN</span><span aria-hidden="true">→</span></a>
-      </div>
-      <div class="bottom" aria-hidden="true"><img class="ring" src="assets/approved-ring.png" width="86" height="87" alt=""><div class="bottom-text">The first circle is forming.</div></div>
-      <a class="mobile-cta-hit" href="quiz.html" aria-label="Let’s begin the NovaX™ quiz"></a>
-    </div>
+<main class="landing-page" aria-label="NovaX™ landing page">
+  <section class="landing-stage" aria-label="NovaX™ introduction">
+    <img class="landing-art" src="assets/landing-approved-mockup.png" alt="NovaX™ — Building the Parallel Economy. What would you do with $50K?">
+    <a class="landing-cta" href="quiz.html" aria-label="Let's begin the NovaX™ quiz"></a>
   </section>
   <nav class="site-footer" aria-label="Site navigation">
-    <span>Copyright © 2026 NovaX™</span><span>•</span><a href="index.html">Home</a><span>•</span><a href="quiz.html">Quiz</a><span>•</span><a href="privacy.html">Privacy</a><span>•</span><a href="terms.html">Terms</a>
+    <span>Copyright © 2026 NovaX™</span><span aria-hidden="true">•</span>
+    <a href="index.html">Home</a><span aria-hidden="true">•</span>
+    <a href="quiz.html">Quiz</a><span aria-hidden="true">•</span>
+    <a href="privacy.html">Privacy</a><span aria-hidden="true">•</span>
+    <a href="terms.html">Terms</a>
   </nav>
 </main>
 </body>
